@@ -1,4 +1,4 @@
-FROM 43068872/pmbokservices:start
+FROM orgcompany/orgcompany.pmbok
 VOLUME /tmp
 ADD org.company.pmbok.jar app.jar
 RUN sh -c 'touch /app.jar'

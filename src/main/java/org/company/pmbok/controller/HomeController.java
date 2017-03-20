@@ -12,7 +12,7 @@ public class HomeController {
 	@RequestMapping("/greetings")
 	public String Index(){
 
-		return "Welcome to the pmbok application";
+		return "Welcome to the PMBoK application ver. 1.0.0";
 	}
 	
 }
