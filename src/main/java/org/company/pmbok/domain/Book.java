@@ -1,8 +1,12 @@
 package org.company.pmbok.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,5 +30,9 @@ public class Book {
 	
 	@Column(name = "CreationDate")
 	public String creationDate;
+	
+	@OneToMany
+	@JoinColumn(name="BookId", referencedColumnName="Id")
+	public List<Chapter> chapters;
 	
 }
